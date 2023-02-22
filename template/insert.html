@@ -1,0 +1,30 @@
+{% include "header.html"%}
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-sm-12">
+				<form method='POST'>
+					{% csrf_token %}
+				<h1 style="text-align: center;">Insert Data</h1>
+				<input type="text" name="name" placeholder="Enter Your Name" class="form-control">
+				<br>
+				<input type="number" name="phone" placeholder="Enter Your Phone No" class="form-control">
+				<br>
+				<select class="form-control" name="city">
+					<option>-------Select City--------</option>
+					<option>Delhi</option>
+					<option>MP</option>
+					<option>Asam</option>
+					<option>Rajasthan</option>
+					<option>Haryana</option>
+					<option>Gujrat</option>
+					<option>UP</option>
+				</select>
+				<br>
+				<input type="submit" value="Insert" class="form-control btn-success " name="">
+			</div>
+		</form>
+
+		</div>
+	</div>
+	{% include "footer.html"%}

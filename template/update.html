@@ -1,0 +1,61 @@
+{% include "header.html"%}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1 style="text-align: center;">Update Data</h1>
+				<form method="POST">
+					{% csrf_token %}
+				<input type="text" name="name" value="{{data1.name}}" placeholder="Enter Your Name" class="form-control">
+				<br>
+				<input type="number" name="phone" value="{{data1.phone_no}}" placeholder="Enter Your Phone No" class="form-control">
+				<br>
+				<select class="form-control" name="city">
+					{% if data1.city == "-------Select City--------" %}
+					<option selected>-------Select City--------</option>
+					{% else %}
+					<option>-------Select City--------</option>
+					{% endif %}
+					{% if data1.city == "Delhi" %}
+					<option selected>Delhi</option>
+					{% else %}
+					<option>Delhi</option>
+					{% endif %}
+					{% if data1.city == "MP"  %}
+					<option selected>MP</option>
+					{% else %}
+					<option>MP</option>
+					{% endif %}
+					{% if data1.city == "Asam" %}
+					<option selected>Asam</option>
+					{% else %}
+					<option>Asam</option>
+					{% endif %}
+					{% if data1.city == "Rajasthan"  %}
+					<option selected>Rajasthan</option>
+					{% else %}
+					<option>Rajasthan</option>
+					{% endif %}
+					{% if data1.city == "Haryana" %}
+					<option selected>Haryana</option>
+					{% else %}
+					<option>Haryana</option>
+					{% endif %}
+					{% if data1.city == "Gujrat" %}
+					<option selected>Gujrat</option>
+					{% else %}
+					<option>Gujrat</option>
+					{% endif %}
+					{% if data1.city == "UP" %}
+					<option selected>UP</option>
+					{% else %}
+					<option>UP</option>
+					{% endif %}
+				</select>
+				<br>
+				<input type="submit" value="Insert" class="form-control btn-success " name="">
+			</form>
+			</div>						
+		</div>
+	</div>
+	{% include "footer.html"%}
